@@ -1,6 +1,6 @@
-import React, {useMemo} from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {Reaction, ReactionProvider} from 'react-native-reactions';
+import React from 'react';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {Reaction, ReactionProvider} from 'react-native-reactions/src';
 import Emoji from 'react-native-emoji';
 
 const STYLES = StyleSheet.create({
