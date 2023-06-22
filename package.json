@@ -13,7 +13,7 @@
     "react": "18.2.0",
     "react-native": "0.71.10",
     "react-native-emoji": "^1.8.0",
-    "react-native-reactions": "^0.0.3",
+    "react-native-reactions": "yubin-gurzu/react-native-reactions-custom#main",
     "react-native-reanimated": "^2.13.0"
   },
   "devDependencies": {
