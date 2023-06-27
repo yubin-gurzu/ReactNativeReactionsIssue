@@ -1,5 +1,5 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import React, {useState} from 'react';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {Reaction, ReactionProvider} from 'react-native-reactions/src';
 import Emoji from 'react-native-emoji';
 
@@ -45,6 +45,8 @@ const App = () => {
     },
   ];
 
+  const [onPress, setOnPress] = useState('');
+
   return (
     <SafeAreaView
       style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -53,16 +55,19 @@ const App = () => {
           type="modal"
           showPopupType="onPress"
           items={ReactionItems}
-          onTap={() => console.log('This is on tap function.')}
+          onTap={() => setOnPress('onTap')}
+          onPress={() => setOnPress('onPress')}
           iconSize={20}
           titleStyle={STYLES.transparent}
           titleBoxStyle={STYLES.transparent}
-          onLongPress={() => console.log('This is on long press function.')}>
+          onLongPress={() => setOnPress('onLongPress')}>
           <View>
             <Emoji name={'heart'} style={{fontSize: 20}} />
           </View>
         </Reaction>
       </ReactionProvider>
+
+      <Text>{onPress}</Text>
     </SafeAreaView>
   );
 };
